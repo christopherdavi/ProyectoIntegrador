@@ -1,0 +1,13 @@
+Instrucciones
+Rama para el trabajo del módulo publicidad
+Leer atentamente las instrucciones antes de empezar
+A partir de esta rama cada integrante debe crear su rama propia para de esta forma no interferir con el trabajo de los demás integrantes
+Para crear una rama propia es necesario seguir los siguientes pasos:
+1- abrir Git Bash dentro de la carpeta correspondiente
+2- verificar el nombre en zul y entre parentesis que aprece, si este es publicidad saltar al paso 4, sino continuar con el 3.
+3- comando: git checkout publicidad
+4- el comando para una nueva rama consta de 3 partes, la palabra git invoca al programa, la palabra branch le indica que vas a crear una "rama", y en lugar de la palabra rama se debe colocar el nombre del integrante que está creando la rama, sin comillas.
+5- comando: git branch "rama"
+6- comando: git checkout "rama"
+donde rama es el nombre de la rama creada
+7- verificar que el nombre en azul sea el de la rama que acaba de crear, si no lo es revise la lista de ramas con el comando: git branch //si se enlista el nombre de su rama repita el paso 6, si no repita desde el paso 4.

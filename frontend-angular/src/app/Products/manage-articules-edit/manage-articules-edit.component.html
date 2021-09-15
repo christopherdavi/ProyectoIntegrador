@@ -1,0 +1,31 @@
+<app-navbar-manage></app-navbar-manage>
+<div class="we-cont">
+  <form (ngSubmit)="updateDataArticules()">
+    <div class="form-group">
+      <label for="">Codigo</label>
+      <input type="text" name="code" class="form-control" [(ngModel)]="articule.code">
+    </div>
+    <div class="form-group">
+      <label for="">Codigo Postal</label>
+      <input type="text" name="codePostal" class="form-control" [(ngModel)]="articule.codePostal">
+    </div>
+    <div class="form-group">
+      <label for="">Stock</label>
+      <input type="text" name="stock" class="form-control" [(ngModel)]="articule.stock">
+    </div>
+    <div class="form-group">
+      <label for="">Descripcion</label>
+      <input type="text" name="description" class="form-control" [(ngModel)]="articule.description">
+    </div>
+    <div class="form-group">
+      <label for="">Imagen</label>
+      <input type="file" name="image" class="form-control" [(ngModel)]="articule.image">
+    </div>
+    <div class="form-group">
+      <label for="">subcategories</label>
+      <input type="number" name="id_sub_categories" class="form-control" [(ngModel)]="articule.id_sub_categories">
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">Enviar</button>
+  </form>
+</div>

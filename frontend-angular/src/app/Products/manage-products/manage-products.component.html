@@ -1,0 +1,96 @@
+<app-navbar-manage></app-navbar-manage>
+<div class="we-cont">
+  <h1>Productos</h1>
+  <form (ngSubmit)="insertDataProducts()">
+    <div class="form-row row">
+      <div class="col">
+        <label>Nombre</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="product.name">
+      </div>
+      <div class="col">
+        <label>Precio Compra</label>
+        <input type="number" name="purshePrice" class="form-control" [(ngModel)]="product.purshePrice">
+      </div>
+      <div class="col">
+        <label>Precio Venta</label>
+        <input type="number" name="salePrice" class="form-control" [(ngModel)]="product.salePrice">
+      </div>
+    </div>
+    <div class="form-row row">
+      <div class="col">
+        <label>Fecha Vencimiento</label>
+        <input type="date" name="expirationDate" class="form-control" [(ngModel)]="product.expirationDate">
+      </div>
+      <div class="col">
+        <label>Tamaño</label>
+        <input type="number" name="weight" class="form-control" [(ngModel)]="product.weight">
+      </div>
+
+      <div class="col">
+        <label>Fragilidad</label>
+        <input type="number" name="fragility" class="form-control" [(ngModel)]="product.fragility">
+      </div>
+    </div>
+    <div class="form-row row">
+      <div class="col">
+        <label>largo</label>
+        <input type="number" name="length" class="form-control" [(ngModel)]="product.length">
+      </div>
+      <div class="col">
+        <label>Amplio</label>
+        <input type="text" name="broad" class="form-control" [(ngModel)]="product.broad">
+      </div>
+      <div class="col">
+        <label>Monto</label>
+        <input type="number" name="amount" class="form-control" [(ngModel)]="product.amount">
+      </div>
+      <div class="col">
+        <label>id_articule</label>
+        <select name="id_articules" id="" class="form-control" [(ngModel)]="product.id_articules">
+          <option *ngFor="let article of articles" value="{{article.id}}">{{article.code}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="btn-cat">
+      <button>Agregar producto</button>
+    </div>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Precio Compra</th>
+        <th>Precio Venta</th>
+        <th>Fecha Vencimiento</th>
+        <th>Tamaño</th>
+        <th>Fragilidad</th>
+        <th>Amplio</th>
+        <th>Monto</th>
+        <th>Largo</th>
+        <th>id_articulo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pro of products | paginate: { itemsPerPage: 3, currentPage: test }">
+        <th scope="row">{{pro.id}}</th>
+        <td>{{pro.name}}</td>
+        <td>{{pro.purshePrice}}</td>
+        <td>{{pro.salePrice}}</td>
+        <td>{{pro.expirationDate}}</td>
+        <td>{{pro.weight}}</td>
+        <td>{{pro.fragility}}</td>
+        <td>{{pro.length}}</td>
+        <td>{{pro.broad}}</td>
+        <td>{{pro.amount}}</td>
+        <td>{{pro.id_articules}}</td>
+        <td><button class="btn btn-danger btn-sm" (click)="deleteDataProducts(pro.id)">Eliminar</button>
+          <button class="btn btn-warning btn-sm mx-2" routerLink="edit-products/{{pro.id}}">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="test = $event" previousLabel="Anterior" nextLabel="Siguiente">
+  </pagination-controls>
+</div>

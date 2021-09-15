@@ -1,0 +1,73 @@
+<app-navbar-manage></app-navbar-manage>
+<div class="we-cont">
+  <h1>Artículos</h1>
+  <form [formGroup]="imageForm" (ngSubmit)="onSubmit()">
+    <div class="form-row row">
+      <div class="col">
+        <div class="input-file">
+          <label>Imagen</label>
+          <input type="file" placeholder="File" (change)="onFileChange($event)" formControlName="file">
+          <img style="width: 100px; height: 100px;" *ngIf="image" class="img-fluid img-thumbnail image" src="{{image}}">
+        </div>
+      </div>
+      <div class="col">
+        <label>Código</label>
+        <input type="text" placeholder="code" formControlName="code" class=" form-control ">
+      </div>
+      <div class="col">
+        <label>Código postal</label>
+        <input type="text" placeholder="codePostal" formControlName="codePostal" class=" form-control">
+      </div>
+    </div>
+    <div class="form-row row">
+      <div class="col">
+        <label>stock</label>
+        <input type="number" placeholder="stock" formControlName="stock" class=" form-control ">
+      </div>
+      <div class="col">
+        <label>Descripción</label>
+        <input type="text" placeholder="description" formControlName="description" class=" form-control ">
+      </div>
+      <div class="col">
+        <label>SubCategoría</label>
+        <select name="id_sub_categories" id="" class="form-control" formControlName="id_sub_categories">
+          <option *ngFor="let subCat of subCategories" value="{{subCat.id}}">{{subCat.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="btn-cat">
+      <button [disabled]="!imageForm.valid">Agregar Artículo</button>
+    </div>
+  </form>
+  <!-- Tabla -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>imagen</th>
+        <th>Codigo</th>
+        <th>Codigo postal</th>
+        <th>stock</th>
+        <th>Descripcion</th>
+        <th>subcategorias</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let art of articules | paginate: { itemsPerPage: 3, currentPage: test }">
+        <th scope="row">{{art.id}}</th>
+        <td><img [src]="'http://localhost:8000/'+art.image" width="100px" height="100px"></td>
+        <td>{{art.code}}</td>
+        <td>{{art.codePostal}}</td>
+        <td>{{art.stock}}</td>
+        <td>{{art.description}}</td>
+        <td>{{art.id_sub_categories}}</td>
+        <td><button class="btn btn-danger btn-sm" (click)="deleteDataArticules(art.id)">Eliminar</button>
+          <button class="btn btn-warning btn-sm mx-2" routerLink="edit-articules/{{art.id}}">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="test = $event" previousLabel="Anterior" nextLabel="Siguiente">
+  </pagination-controls>
+</div>

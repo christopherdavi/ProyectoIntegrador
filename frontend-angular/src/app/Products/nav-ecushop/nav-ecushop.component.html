@@ -1,0 +1,226 @@
+<nav class="navbar navbar-expand-lg navbar-warning bg-warning  text-warning bg-warning-50">
+<<<<<<< HEAD
+  <div class="container-fluid">
+      <li class="nav-item ">
+          <a class="nav-link text-dark" href="#" size="30 ">Ecushoppping.com
+          </a>
+      </li>
+      <li class="nav-item">
+          <form class="form" (ngSubmit)="getNameProductData()">
+              <i class="fas f">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Articulos" aria-label="Search" [(ngModel)]="query">
+              </i>
+              <button class="btn btn-outline-dark my-2 my-sm-2 text-dark" (click)="onSearch()">Buscar</button>
+          </form>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Mi Alibaba
+              <i class="fas fa-user"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Mis pedidos</a></li>
+              <li><a class="dropdown-item" href="#">Mis favoritos</a></li>
+              <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+              <li><a class="dropdown-item" href="#">Membresia de proveedores</a></li>
+=======
+    <div class="container-fluid">
+        <li class="nav-item ">
+            <a class="nav-link text-dark" href="#" size="30 ">Ecushoppping.com
+            </a>
+        </li>
+        <li class="nav-item">
+            <form class="form" (ngSubmit)="getNameProductData()">
+                <i class="fas f">
+                    <input class="form-control mr-sm-2" name="search" type="search" placeholder="Articulos" aria-label="Search" [(ngModel)]="search">
+                </i>
+                <button class="btn btn-outline-dark my-2 my-sm-2 text-dark" (click)="onSearch()">Buscar</button>
+            </form>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Mi Alibaba
+                <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Mis pedidos</a></li>
+                <li><a class="dropdown-item" href="#">Mis favoritos</a></li>
+                <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                <li><a class="dropdown-item" href="#">Membresia de proveedores</a></li>
+>>>>>>> fec443253fe506cbeb5b7ca253e8be10976e4f72
+
+          </ul>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Mensajes
+              <i class="fas fa-envelope"></i>
+
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-dark" href="#">Ver todos los mensajes</a></li>
+
+
+          </ul>
+      </li>
+      <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Pedidos
+              <i class="fas fa-shopping-bag"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Calidad del producto</a></li>
+              <li><a class="dropdown-item" href="#">Envio puntual</a></li>
+
+          </ul>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Carrito de compras
+              <i class="fas fa-cart-plus"></i>
+              <span class="oi oi-envelope-closed"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Ver productos</a></li>
+          </ul>
+      </li>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<<<<<<< HEAD
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Categorias
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+            <li><a class="dropdown-item"href="#"*ngFor="let cat of categories">{{cat.name}}</a></li>
+                       
+
+          <app-submenu  class="submenu"></app-submenu>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Listo para enviar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Exibiciones comerciales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><Em>Equipo de proteccion</Em></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Central de compradores
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Garantia de comercio</a></li>
+            <li><a class="dropdown-item" href="#">Servicio de logistica</a></li>
+          </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Vender en Alibaba
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Para vendedor global</a></li>
+            <li><a class="dropdown-item" href="#">Para vendeor chino</a></li>
+          </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Ayuda
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Para lo compradores</a></li>
+            <li><a class="dropdown-item" href="#">Para los proveedores</a></li>
+            <li><a class="dropdown-item" href="#">Denunciar abuso</a></li>
+          </ul>
+      </ul>
+=======
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Categorias
+      </a> 
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Maquinaria / Vehículos y accesorios</a></li>
+              <li><a class="dropdown-item" href="#">Electrónica de consumo / Electrodomésticos</a></li>
+              <li><a class="dropdown-item" href="#">Ropa / Accesorios de moda / Relojes, joyería, gafas</a></li>
+              <li><a class="dropdown-item" href="#">Luces e iluminación / Construcción y bienes raíces</a></li>
+              <li><a class="dropdown-item" href="#">Hogar y jardín / Muebles</a></li>
+              <li><a class="dropdown-item" href="#">Tela y materias primas textiles / Textiles para el hogar</a></li>
+              <li><a class="dropdown-item" href="#">Belleza y cuidado personal / Salud y medicina</a></li>
+              <li><a class="dropdown-item" href="#">Empaquetado e impresión / Materiales para la escuela y la oficina</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Listo para enviar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exibiciones comerciales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><Em>Equipo de proteccion</Em></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Central de compradores
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+              <li><a class="dropdown-item" href="#">Garantia de comercio</a></li>
+              <li><a class="dropdown-item" href="#">Servicio de logistica</a></li>
+            </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Vender en Alibaba
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Para vendedor global</a></li>
+              <li><a class="dropdown-item" href="#">Para vendeor chino</a></li>
+            </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ayuda
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Para lo compradores</a></li>
+              <li><a class="dropdown-item" href="#">Para los proveedores</a></li>
+              <li><a class="dropdown-item" href="#">Denunciar abuso</a></li>
+            </ul>
+        </ul>
+      </div>
+>>>>>>> fec443253fe506cbeb5b7ca253e8be10976e4f72
+    </div>
+  </div>
+</nav>
+
+<br />

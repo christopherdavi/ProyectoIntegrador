@@ -1,0 +1,40 @@
+/* Estilos para el filtro */
+.filter{
+    display: flex;
+}
+.select{
+    margin: 0px 0px 0px 10px;
+    padding: 10px;
+    border-color: var(--we-navbar);
+    outline: var(--we-navbar);
+}
+.btn-select{
+    padding: 9px;
+    background-color: var(--we-navbar);
+    color: black;
+    border-color: var(--we-navbar);
+}
+
+/* Estilos para la galería */
+#galeria .col-lg-2{
+    margin: 0 !important;
+    padding: 10px;
+}
+
+#galeria img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 250px;
+}
+#galeria img:hover{
+    border: 5px solid white;
+}
+.content{
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+    text-align: center;
+}
+
+#name{
+    font-weight: 600;
+}

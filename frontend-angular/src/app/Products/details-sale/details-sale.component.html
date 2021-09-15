@@ -1,0 +1,34 @@
+<!-- navbar Ecushop -->
+<app-nav-ecushop (onEnter)="getNameProdcutata($event)"></app-nav-ecushop>
+<div class="container">
+    <div class="we-card d-flex justify-content-center" *ngFor="let pro of products">
+        <div class="we-card-img flex-fill" style="width: 40%;">
+            <img [src]="'http://localhost:8000/'+pro.image" width="100px">
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12" style="width: 40%;">
+            <div class="we-details">
+                <h5 class="text-center">Detalles</h5>
+                <p>{{pro.description}}</p>
+            </div>
+            <dl>
+               <div><dt>Nombre:</dt><br>
+                <dd>{{pro.name}}</dd><br> 
+            </div> 
+                <dt>Precio compra:</dt><br>
+                <dd><span>{{pro.purshePrice}}</span></dd><br>
+                <dt>Precio venta:</dt><br>
+                <dd>{{pro.salePrice}}</dd><br>
+                <dt>fecha de vencimiento</dt><br>
+                <dd>{{pro.expirationDate}}</dd><br>
+                <dt>tamaño</dt><br>
+                <dd>{{pro.weight}}</dd>
+            </dl>
+        </div>
+        <div class="we-card-car responsive" style="width: 20%;">
+            <div>
+                <a class="btn btn-danger "><i class="fas fa-cart-plus"></i>Añadir a carrito</a>
+                <a class="btn btn-primary" routerLink="['categories']" (click)="backHome()"><i class="fas fa-home"></i>Inicio</a>
+            </div>               
+        </div>
+    </div>
+</div>

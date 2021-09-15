@@ -1,0 +1,44 @@
+<app-navbar-manage></app-navbar-manage>
+<div class="we-cont">
+  <form (ngSubmit)="updateProducts()">
+      <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" name="name" class="form-control"[(ngModel)]="product.name">
+      </div>
+      <div class="form-group">
+        <label for="">Precio Compra</label>
+        <input type="number" name="purshePrice" class="form-control" [(ngModel)]="product.purshePrice">
+      </div>
+      <div class="form-group">
+        <label for="">Precio Venta</label>
+        <input type="number" name="salePrice" class="form-control" [(ngModel)]="product.salePrice">
+      </div>
+      <div class="form-group">
+        <label for="">Fecha Vencimiento</label>
+        <input type="date" name="expirationDate" class="form-control"[(ngModel)]="product.expirationDate">
+      </div>
+      <div class="form-group">
+        <label for="">Tamaño</label>
+        <input type="number" name="weight" class="form-control" [(ngModel)]="product.weight">
+      </div>
+      
+      <div class="form-group">
+        <label for="">Fragilidad</label>
+        <input type="number" name="fragility" class="form-control" [(ngModel)]="product.fragility">
+      </div>
+      <div class="form-group">
+        <label for="">Largo</label>
+        <input type="number" name="length" class="form-control" [(ngModel)]="product.length">
+      </div>
+      <div class="form-group">
+        <label for="">Ancho</label>
+        <input type="number" name="broad" class="form-control" [(ngModel)]="product.broad">
+      </div>
+      <div class="form-group">
+        <label for="">Cantidad de articulos</label>
+        <input type="number" name="amount" class="form-control" [(ngModel)]="product.amount">
+      </div>
+    
+    <button class="btn btn-dark btn-sm mt-4">Enviar</button>
+    </form>
+</div>

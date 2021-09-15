@@ -1,0 +1,22 @@
+  <!-- <div class="category-box">
+    <ul *ngFor="let i of  subCategories">
+        <h4 class="title">{{i.name}}</h4>
+        <li *ngFor="let category of i.sub_categories">
+            <a href="" class="dropdown-item">
+                 {{subcategory_name}}
+                
+            </a>
+        </li>
+    </ul>    
+</div>  -->
+
+
+<div class="card card-body">
+    <ul *ngFor="let i of  subCategories">
+        <h4 class="title">{{i.category_name}}</h4>
+            <a href="" class="dropdown-item">
+                 {{i.subcategory_name}}
+            </a>
+    </ul>    
+</div>   
+

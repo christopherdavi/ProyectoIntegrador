@@ -1,0 +1,67 @@
+
+<div class="we-cont">
+  <app-navbar-manage></app-navbar-manage>
+ <h1>Categorias</h1>
+  <!-- formulario categorias -->
+  <form class="we-form" (ngSubmit)="insertDataCategories()" [formGroup]="createCategorieForm">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Nombre</label>
+      <div class="col-sm-10">
+        <input type="text" name="name" class="form-control" [(ngModel)]="categorie.name" formControlName="name">
+        <p id="validator" *ngIf="name.invalid && (name.dirty || name.touched)" role="alert">
+          El nombre debe contener almenos 3 letras
+        </p>
+      </div>
+      <label class="col-sm-2 col-form-label">Código</label>
+      <div class="col-sm-10">
+        <input type="number" name="condition" class="form-control" [(ngModel)]="categorie.condition"
+          formControlName="condition">
+        <p id="validator" *ngIf="condition.invalid && (condition.dirty || condition.touched)" role="alert">
+          Solo números
+        </p>
+      </div>
+      <label class="col-sm-2 col-form-label">Icono</label>
+      <div class="col-sm-2">
+        <select class="form-select" name="icon" [(ngModel)]="categorie.icon" formControlName="icon">
+          <option value="👘">👘</option>
+          <option value="🔌">🔌</option>
+          <option value="🚗">🚗</option>
+          <option value="🏈">🏈</option>
+          <option value="🚧">🚧</option>
+          <option value="🏠">🏠</option>
+          <option value="💅">💅</option>
+        </select>
+        <p id="validator" *ngIf="icon.invalid && (icon.dirty || icon.touched)" role="alert">
+          Seleccione un icono
+        </p>
+      </div>
+    </div>
+    <div class="btn-cat">
+      <button type="submit">Agregar categoría</button>
+    </div>
+  </form>
+<!-- tabla -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Código</th>
+        <th>Icono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of categories | paginate: { itemsPerPage: 4, currentPage: test }">
+        <th scope="row">{{cat.id}}</th>
+        <td>{{cat.name}}</td>
+        <td>{{cat.condition}}</td>
+        <td>{{cat.icon}}</td>
+        <td><button class="btn btn-danger btn-sm" (click)="deleteDataCategories(cat.id)">Eliminar</button>
+          <button class="btn btn-warning btn-sm mx-2" routerLink="edit-categorie/{{cat.id}}">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="test = $event" previousLabel="Anterior" nextLabel="Siguiente">
+  </pagination-controls>

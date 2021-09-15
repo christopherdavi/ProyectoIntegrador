@@ -1,0 +1,19 @@
+<div>
+  <app-nav-ecushop (onEnter)="getNameProdcutata($event)"></app-nav-ecushop>
+</div>
+
+<section id="galeria" class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-6 col-sm-12" *ngFor="let pro of products">
+      <a routerLink="sale/{{pro.id}}">
+        <img [src]="'http://localhost:8000/'+pro.image">
+      </a>
+      <div class="content">
+        <div id="name">{{pro.name}}</div>
+        <div>{{pro.description}}</div>
+        <div>Precio:{{pro.salePrice}}</div>
+      </div>
+    </div>
+  </div>
+  <p>No hay resultados</p>
+</section>

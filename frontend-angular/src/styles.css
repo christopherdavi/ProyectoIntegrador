@@ -1,0 +1,53 @@
+/* variables */
+:root {
+    --we-orange: rgba(255,102,0);
+    --we-cat-container: rgba(11,23,37);
+    --we-navbar:rgba(254,193,7);
+}
+.we-cont{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 240px);
+  left: 240px;
+  background-color: white;
+  padding: 10px;
+}
+/* Estilos para los formularios */
+.we-form{
+  padding: 10px ;
+}
+
+label{
+  font-size: medium;
+}
+input, select{
+  margin-bottom: 8px;
+}
+
+#validator{
+  color: red;
+  padding: 0;
+  margin: 5px;
+}
+.btn-cat{
+  align-items: center;
+  text-align: center;
+}
+.btn-cat button{
+  text-align: center;
+  background: #008CBA;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+table{
+  text-align: center;
+}
+
+
+body{
+    background-color: #eeeeee;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

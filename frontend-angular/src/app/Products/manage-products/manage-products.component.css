@@ -1,0 +1,35 @@
+.we-cont{
+    background-color: white;
+    padding: 10px;
+}
+.we-form{
+    padding: 10px ;
+}
+
+label{
+    font-size: medium;
+}
+input{
+    margin-bottom: 8px;
+}
+
+p{
+    color: red;
+    padding: 0;
+    margin: 5px;
+}
+.btn-cat{
+    align-items: center;
+    text-align: center;
+}
+.btn-cat button{
+    text-align: center;
+    background: #008CBA;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+table{
+    text-align: center;
+}

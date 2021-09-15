@@ -1,0 +1,51 @@
+<!-- navbar Ecushop -->
+<div>
+    <app-nav-ecushop (onEnter)="getNameProdcutata($event)"></app-nav-ecushop>
+</div>
+<!-- cards individuales -->
+<div class="container filter">
+    <!-- Filtro para categorias -->
+    <h2>Filtrar por categoría:</h2>
+    <form (ngSubmit)="getProByCat()">
+        <div >
+            <select class="select" name="cat.id" [(ngModel)]="id">
+                <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
+            </select>
+            <button class="btn-select" (click)="searchProCat()">Filtrar</button>
+        </div>
+    </form>
+</div>
+
+<!-- Galeria de productos -->
+
+<section id="galeria" class="container">
+    <div class="row">
+        <div class="col-lg-2 col-md-6 col-sm-12" *ngFor="let pro of proCat">
+            <a routerLink="sale/{{pro.id}}">
+                <img [src]="'http://localhost:8000/'+pro.image">
+            </a>
+            <div class="content">
+                <div id="name">{{pro.product_name}}</div>
+                <div>{{pro.purshePrice}}</div>
+                <div>{{pro.stock}}</div>
+                <div>{{pro.description}}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="container">
+    <h2>Todos las categorias</h2>
+    <div class="row">
+        <div class="col-lg-2 col-md-6 col-sm-12" *ngFor="let pro of products">
+            <a routerLink="sale/{{pro.id}}">
+                <img [src]="'http://localhost:8000/'+pro.image">
+            </a>
+            <div class="content">
+                <div id="name">{{pro.name}}</div>
+                <div>{{pro.salePrice}}</div>
+                <div>{{pro.description}}</div>
+            </div>
+        </div>
+    </div>
+</section>

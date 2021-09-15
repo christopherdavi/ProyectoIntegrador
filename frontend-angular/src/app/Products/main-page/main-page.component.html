@@ -1,0 +1,22 @@
+<!-- navbar Ecushop -->
+<div>
+  <app-nav-ecushop (onEnter)="getNameProdcutata($event)"></app-nav-ecushop>
+</div>
+<div class="container container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-20 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+ <ul class="nav-item dropdown" aria-labelledby="navbarDropdown">
+     <a class="nav-item dropdown nav-link active text-dark" aria-current="page">
+<span data-feather="home"></span>
+              Mis mercados
+            </a>
+ <tr *ngFor="let cat of categories ">
+  <td>{{cat.icon}}</td>                  
+ <td><a class="dropdown-item" routerLink="/categories">{{cat.name}}</a></td>                  
+ </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+

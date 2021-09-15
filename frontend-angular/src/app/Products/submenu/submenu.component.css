@@ -1,0 +1,44 @@
+*{
+    font-size: .8rem;
+   
+}
+div{
+    left: 221px;
+    position: -webkit-sticky;
+    top:-63px;
+    padding: 0%;
+    margin-bottom: 20px;
+    display:none;
+    display:inline-block;
+    
+}
+
+li{
+    list-style: none;
+    padding: 1px;
+}
+li>a{
+    text-decoration: none;
+    color: #666;
+}
+li>a:hover{
+    text-decoration: none;
+    color: #FF751A;
+    cursor: pointer;
+}
+.title{
+    color: #2192D9;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.title:hover{
+    color: #FF751A;
+}
+.category-box{
+    display:none;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-gap: 5px;
+}
+
